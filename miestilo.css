@@ -1,0 +1,106 @@
+/* ====== Estilos generales ====== */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f9;
+  color: #333;
+  text-align: center;
+}
+
+h2, h3 {
+  margin: 0.5em 0;
+}
+
+/* ====== Tarjeta principal ====== */
+.receta-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  padding: 20px;
+  margin-top: 50px;
+  transition: transform 0.3s;
+}
+
+.receta-item:hover {
+  transform: translateY(-5px);
+}
+
+.img-pastel {
+  cursor: pointer;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.img-pastel:hover {
+  transform: scale(1.05);
+}
+
+/* ====== Modal de receta ====== */
+.info-receta {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  animation: aparecer 0.3s ease;
+}
+
+/* Animación de aparición */
+@keyframes aparecer {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ====== Contenido del modal ====== */
+.receta-contenido {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 900px;
+  width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.contenido-dividido {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.texto-receta {
+  flex: 1;
+}
+
+.texto-receta ul {
+  list-style: square;
+  padding-left: 20px;
+}
+
+.receta-imagen img {
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+/* ====== Botón ====== */
+.boton-cerrar {
+  padding: 12px 25px;
+  background-color: #7c7c7c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.boton-cerrar:hover {
+  background-color: #555;
+  transform: scale(1.05);
+}
